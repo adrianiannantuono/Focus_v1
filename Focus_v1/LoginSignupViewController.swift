@@ -11,7 +11,7 @@ import FirebaseAuth
 import FirebaseDatabase
 
 class LoginSignupViewController: UIViewController {
-    var dRef = Database.database().reference()
+    var dRe = Database.database().reference()
     
     var onCreateAccount = true
     var borderWidthError = 1
@@ -34,16 +34,21 @@ class LoginSignupViewController: UIViewController {
      
     @IBOutlet weak var createAccountSignUpButton: CreateAccountSignUpButton!
     
-    var newStoryBoard: UIStoryboard!
     var newViewController: UITabBarController!
     
     
     override func viewDidLoad() {
         super.viewDidLoad()
         self.hideKeyboardWhenTappedAround()
-        newStoryBoard = UIStoryboard(name: "Main", bundle: nil)
-        newViewController = (newStoryBoard.instantiateViewController(withIdentifier: "home") as! UITabBarController)
+        
+        newViewController = (self.storyboard?.instantiateViewController(withIdentifier: "home") as! UITabBarController)
         newViewController.modalPresentationStyle = .fullScreen
+    }
+    
+    override func viewDidAppear(_ animated: Bool) {
+        if (Auth.auth().currentUser != nil) {
+            self.present(self.newViewController, animated: false, completion: nil)
+        }
     }
     
     
@@ -95,14 +100,15 @@ class LoginSignupViewController: UIViewController {
         passwordField.layer.borderWidth = 0
         reEnterPasswordField.layer.borderWidth = 0
         var ret = false;
+        if (!emptyEmail()) {
+            ret = true
+        }
+        if(!emptyPassword()) {
+            ret = true
+        }
+        
         if (onCreateAccount == true) {
-            if (!validName()) {
-                ret = true
-            }
-            if (!validEmail()) {
-                ret = true
-            }
-            if(!validPassword()) {
+            if (!emptyName()) {
                 ret = true
             }
             if (ret) {
@@ -137,38 +143,62 @@ class LoginSignupViewController: UIViewController {
                 }
             }
         } else {
-            
+            Auth.auth().signIn(withEmail: emailField.text!, password: passwordField.text!) { authResult, error in
+                if (error == nil) {
+                    // Succesfully logged in
+                    self.present(self.newViewController, animated: true, completion: nil)
+                } else {
+                    // Error loggin in
+                    if let errorCode = AuthErrorCode(rawValue: error!._code) {
+                        switch errorCode {
+                            case .invalidEmail:
+                                self.emailError.text = "      Invalid email"
+                                self.emailField.layer.borderWidth = CGFloat(self.borderWidthError)
+                                print("Invalid email")
+                            default:
+                                self.emailError.text = "      Email/Password invalid"
+                                self.emailField.layer.borderWidth = CGFloat(self.borderWidthError)
+                                print("Could not create account: \(String(describing: error))")
+                        }
+                    }
+                    return
+                }
+            }
         }
         
 
     }
     
-    func validPassword() -> Bool {
-        if (passwordField.text == "" && reEnterPasswordField.text == ""){
+    func emptyPassword() -> Bool {
+        if (onCreateAccount == true && passwordField.text == "" && reEnterPasswordField.text == ""){
             passwordError.text = "      Please enter a password"
             passwordField.layer.borderWidth = CGFloat(borderWidthError);
             reEnterPasswordField.layer.borderWidth = CGFloat(borderWidthError);
             reEnterPasswordError.text = "      Please re-enter your password"
             return false
-        } else if (passwordField.text == "" && reEnterPasswordField.text != "") {
+        } else if (onCreateAccount == true && passwordField.text == "" && reEnterPasswordField.text != "") {
             passwordError.text = "      Please enter a password"
             passwordField.layer.borderWidth = CGFloat(borderWidthError);
             return false
-        } else if (passwordField.text != "" && reEnterPasswordField.text == "") {
+        } else if (onCreateAccount == true && passwordField.text != "" && reEnterPasswordField.text == "") {
             reEnterPasswordError.text = "      Please re-enter your password"
             reEnterPasswordField.layer.borderWidth = CGFloat(borderWidthError);
             return false
-        } else if (passwordField.text != reEnterPasswordField.text) {
+        } else if (onCreateAccount == true && passwordField.text != reEnterPasswordField.text) {
             passwordError.text = "      Passwords don't match"
             passwordField.layer.borderWidth = CGFloat(borderWidthError);
             reEnterPasswordError.text = "      Passwords don't match"
             reEnterPasswordField.layer.borderWidth = CGFloat(borderWidthError);
             return false
+        } else if (onCreateAccount == false && passwordField.text == "") {
+            passwordError.text = "      Please enter a password"
+            passwordField.layer.borderWidth = CGFloat(borderWidthError);
+            return false
         }
         return true
     }
     
-    func validName() -> Bool {
+    func emptyName() -> Bool {
         var ret = true
         if (firstNameField.text == "") {
             firstNameField.layer.borderWidth = CGFloat(borderWidthError);
@@ -183,7 +213,7 @@ class LoginSignupViewController: UIViewController {
         return ret
     }
     
-    func validEmail() -> Bool {
+    func emptyEmail() -> Bool {
         var ret = true
         if (emailField.text == "") {
             emailField.layer.borderWidth = CGFloat(borderWidthError);

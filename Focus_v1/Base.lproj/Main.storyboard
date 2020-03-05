@@ -16,9 +16,9 @@
                         <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
                         <subviews>
                             <button opaque="NO" contentMode="scaleToFill" fixedFrame="YES" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="3Kq-6n-QVw">
-                                <rect key="frame" x="161" y="304" width="46" height="30"/>
+                                <rect key="frame" x="154" y="304" width="60" height="30"/>
                                 <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
-                                <state key="normal" title="Button"/>
+                                <state key="normal" title="Sign Out"/>
                                 <connections>
                                     <action selector="buttonClicked:" destination="9pv-A4-QxB" eventType="touchUpInside" id="fpe-Be-1qw"/>
                                 </connections>
@@ -95,7 +95,7 @@
         <!--LoginSignupViewController-->
         <scene sceneID="IB2-Zu-nU6">
             <objects>
-                <viewController id="iAl-0h-V4J" userLabel="LoginSignupViewController" customClass="LoginSignupViewController" customModule="Focus_v1" customModuleProvider="target" sceneMemberID="viewController">
+                <viewController storyboardIdentifier="logInSignUp" id="iAl-0h-V4J" userLabel="LoginSignupViewController" customClass="LoginSignupViewController" customModule="Focus_v1" customModuleProvider="target" sceneMemberID="viewController">
                     <view key="view" contentMode="scaleToFill" id="a8Y-ny-b75">
                         <rect key="frame" x="0.0" y="0.0" width="414" height="896"/>
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>

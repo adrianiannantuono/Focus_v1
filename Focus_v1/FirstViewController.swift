@@ -7,16 +7,27 @@
 //
 
 import UIKit
+import FirebaseAuth
+import FirebaseDatabase
 
 class FirstViewController: UIViewController {
+    var dRe = Database.database().reference()
+    
     @IBOutlet weak var button: UIButton!
+    
+    var newViewController: UIViewController!
+    
     
     override func viewDidLoad() {
         super.viewDidLoad()
         // Do any additional setup after loading the view.
     }
     @IBAction func buttonClicked(_ sender: Any) {
-        button.setTitle("test", for: UIControl.State.normal)
+        try! Auth.auth().signOut()
+        newViewController = (self.storyboard?.instantiateViewController(withIdentifier: "logInSignUp"))
+        newViewController.modalPresentationStyle = .fullScreen
+        self.present(self.newViewController, animated: true, completion: nil)
+        
     }
     
 
