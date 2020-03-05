@@ -10,7 +10,6 @@ import UIKit
 import FirebaseAuth
 import FirebaseDatabase
 
-
 class LoginSignupViewController: UIViewController {
     var dRef = Database.database().reference()
     
