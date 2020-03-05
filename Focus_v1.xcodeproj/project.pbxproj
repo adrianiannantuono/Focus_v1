@@ -1,0 +1,778 @@
+// !$*UTF8*$!
+{
+	archiveVersion = 1;
+	classes = {
+	};
+	objectVersion = 50;
+	objects = {
+
+/* Begin PBXBuildFile section */
+		6B3849475CF93B1470DB43E9 /* Pods_Focus_v1.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = A7105EE6EE8689D7A2B7C263 /* Pods_Focus_v1.framework */; };
+		D2C5AB9B28B8CBA71D46C013 /* Pods_Focus_v1Tests.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 5DBBAF867BEE1C81E38DA034 /* Pods_Focus_v1Tests.framework */; };
+		EE39BD7024008A5200978956 /* dismissKeyboard.swift in Sources */ = {isa = PBXBuildFile; fileRef = EE39BD6F24008A5200978956 /* dismissKeyboard.swift */; };
+		EE6DA48B23F731260078B210 /* AppDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = EE6DA48A23F731260078B210 /* AppDelegate.swift */; };
+		EE6DA48D23F731260078B210 /* SceneDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = EE6DA48C23F731260078B210 /* SceneDelegate.swift */; };
+		EE6DA48F23F731260078B210 /* FirstViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = EE6DA48E23F731260078B210 /* FirstViewController.swift */; };
+		EE6DA49123F731260078B210 /* MyAccountViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = EE6DA49023F731260078B210 /* MyAccountViewController.swift */; };
+		EE6DA49423F731260078B210 /* Main.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = EE6DA49223F731260078B210 /* Main.storyboard */; };
+		EE6DA49623F731280078B210 /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = EE6DA49523F731280078B210 /* Assets.xcassets */; };
+		EE6DA49923F731280078B210 /* LaunchScreen.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = EE6DA49723F731280078B210 /* LaunchScreen.storyboard */; };
+		EE6DA4A423F731280078B210 /* Focus_v1Tests.swift in Sources */ = {isa = PBXBuildFile; fileRef = EE6DA4A323F731280078B210 /* Focus_v1Tests.swift */; };
+		EE6DA4AF23F731280078B210 /* Focus_v1UITests.swift in Sources */ = {isa = PBXBuildFile; fileRef = EE6DA4AE23F731280078B210 /* Focus_v1UITests.swift */; };
+		EE6DA4BD23F732E90078B210 /* LoginSignupViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = EE6DA4BC23F732E90078B210 /* LoginSignupViewController.swift */; };
+		EE6DA4BF23F739640078B210 /* LoginSignupTextField.swift in Sources */ = {isa = PBXBuildFile; fileRef = EE6DA4BE23F739640078B210 /* LoginSignupTextField.swift */; };
+		EE6DA4C123F7518A0078B210 /* CreateAccountSignupButton.swift in Sources */ = {isa = PBXBuildFile; fileRef = EE6DA4C023F7518A0078B210 /* CreateAccountSignupButton.swift */; };
+		EE7808D4241092910058556C /* GoogleService-Info.plist in Resources */ = {isa = PBXBuildFile; fileRef = EE7808D3241092900058556C /* GoogleService-Info.plist */; };
+		EE7808D5241092910058556C /* GoogleService-Info.plist in Resources */ = {isa = PBXBuildFile; fileRef = EE7808D3241092900058556C /* GoogleService-Info.plist */; };
+		EE7808D6241092910058556C /* GoogleService-Info.plist in Resources */ = {isa = PBXBuildFile; fileRef = EE7808D3241092900058556C /* GoogleService-Info.plist */; };
+		F4C1BCD2263912D21D6BC51E /* Pods_Focus_v1_Focus_v1UITests.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 701A3EAD754BC354D2D4D512 /* Pods_Focus_v1_Focus_v1UITests.framework */; };
+/* End PBXBuildFile section */
+
+/* Begin PBXContainerItemProxy section */
+		EE6DA4A023F731280078B210 /* PBXContainerItemProxy */ = {
+			isa = PBXContainerItemProxy;
+			containerPortal = EE6DA47F23F731260078B210 /* Project object */;
+			proxyType = 1;
+			remoteGlobalIDString = EE6DA48623F731260078B210;
+			remoteInfo = Focus_v1;
+		};
+		EE6DA4AB23F731280078B210 /* PBXContainerItemProxy */ = {
+			isa = PBXContainerItemProxy;
+			containerPortal = EE6DA47F23F731260078B210 /* Project object */;
+			proxyType = 1;
+			remoteGlobalIDString = EE6DA48623F731260078B210;
+			remoteInfo = Focus_v1;
+		};
+/* End PBXContainerItemProxy section */
+
+/* Begin PBXFileReference section */
+		1D5D4408B6E3DF4B8548BEAC /* Pods-Focus_v1.debug.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-Focus_v1.debug.xcconfig"; path = "Target Support Files/Pods-Focus_v1/Pods-Focus_v1.debug.xcconfig"; sourceTree = "<group>"; };
+		268EA5615770FB2B04598D07 /* Pods-Focus_v1Tests.release.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-Focus_v1Tests.release.xcconfig"; path = "Target Support Files/Pods-Focus_v1Tests/Pods-Focus_v1Tests.release.xcconfig"; sourceTree = "<group>"; };
+		4C851CE98AFA3CF7C295616A /* Pods-Focus_v1-Focus_v1UITests.debug.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-Focus_v1-Focus_v1UITests.debug.xcconfig"; path = "Target Support Files/Pods-Focus_v1-Focus_v1UITests/Pods-Focus_v1-Focus_v1UITests.debug.xcconfig"; sourceTree = "<group>"; };
+		5DBBAF867BEE1C81E38DA034 /* Pods_Focus_v1Tests.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; includeInIndex = 0; path = Pods_Focus_v1Tests.framework; sourceTree = BUILT_PRODUCTS_DIR; };
+		651DFBC6CC3C92A789167427 /* Pods-Focus_v1.release.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-Focus_v1.release.xcconfig"; path = "Target Support Files/Pods-Focus_v1/Pods-Focus_v1.release.xcconfig"; sourceTree = "<group>"; };
+		701A3EAD754BC354D2D4D512 /* Pods_Focus_v1_Focus_v1UITests.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; includeInIndex = 0; path = Pods_Focus_v1_Focus_v1UITests.framework; sourceTree = BUILT_PRODUCTS_DIR; };
+		A7105EE6EE8689D7A2B7C263 /* Pods_Focus_v1.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; includeInIndex = 0; path = Pods_Focus_v1.framework; sourceTree = BUILT_PRODUCTS_DIR; };
+		C0CE4F8B7F396436DE59AAD1 /* Pods-Focus_v1-Focus_v1UITests.release.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-Focus_v1-Focus_v1UITests.release.xcconfig"; path = "Target Support Files/Pods-Focus_v1-Focus_v1UITests/Pods-Focus_v1-Focus_v1UITests.release.xcconfig"; sourceTree = "<group>"; };
+		CEBD6984470916C3B4A9DFFC /* Pods-Focus_v1Tests.debug.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-Focus_v1Tests.debug.xcconfig"; path = "Target Support Files/Pods-Focus_v1Tests/Pods-Focus_v1Tests.debug.xcconfig"; sourceTree = "<group>"; };
+		EE39BD6F24008A5200978956 /* dismissKeyboard.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = dismissKeyboard.swift; sourceTree = "<group>"; };
+		EE6DA48723F731260078B210 /* Focus_v1.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = Focus_v1.app; sourceTree = BUILT_PRODUCTS_DIR; };
+		EE6DA48A23F731260078B210 /* AppDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AppDelegate.swift; sourceTree = "<group>"; };
+		EE6DA48C23F731260078B210 /* SceneDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SceneDelegate.swift; sourceTree = "<group>"; };
+		EE6DA48E23F731260078B210 /* FirstViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = FirstViewController.swift; sourceTree = "<group>"; };
+		EE6DA49023F731260078B210 /* MyAccountViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = MyAccountViewController.swift; sourceTree = "<group>"; };
+		EE6DA49323F731260078B210 /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = Base; path = Base.lproj/Main.storyboard; sourceTree = "<group>"; };
+		EE6DA49523F731280078B210 /* Assets.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = Assets.xcassets; sourceTree = "<group>"; };
+		EE6DA49823F731280078B210 /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = Base; path = Base.lproj/LaunchScreen.storyboard; sourceTree = "<group>"; };
+		EE6DA49A23F731280078B210 /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
+		EE6DA49F23F731280078B210 /* Focus_v1Tests.xctest */ = {isa = PBXFileReference; explicitFileType = wrapper.cfbundle; includeInIndex = 0; path = Focus_v1Tests.xctest; sourceTree = BUILT_PRODUCTS_DIR; };
+		EE6DA4A323F731280078B210 /* Focus_v1Tests.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Focus_v1Tests.swift; sourceTree = "<group>"; };
+		EE6DA4A523F731280078B210 /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
+		EE6DA4AA23F731280078B210 /* Focus_v1UITests.xctest */ = {isa = PBXFileReference; explicitFileType = wrapper.cfbundle; includeInIndex = 0; path = Focus_v1UITests.xctest; sourceTree = BUILT_PRODUCTS_DIR; };
+		EE6DA4AE23F731280078B210 /* Focus_v1UITests.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Focus_v1UITests.swift; sourceTree = "<group>"; };
+		EE6DA4B023F731280078B210 /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
+		EE6DA4BC23F732E90078B210 /* LoginSignupViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = LoginSignupViewController.swift; sourceTree = "<group>"; };
+		EE6DA4BE23F739640078B210 /* LoginSignupTextField.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = LoginSignupTextField.swift; sourceTree = "<group>"; };
+		EE6DA4C023F7518A0078B210 /* CreateAccountSignupButton.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = CreateAccountSignupButton.swift; sourceTree = "<group>"; };
+		EE7808D3241092900058556C /* GoogleService-Info.plist */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text.plist.xml; path = "GoogleService-Info.plist"; sourceTree = "<group>"; };
+/* End PBXFileReference section */
+
+/* Begin PBXFrameworksBuildPhase section */
+		EE6DA48423F731260078B210 /* Frameworks */ = {
+			isa = PBXFrameworksBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+				6B3849475CF93B1470DB43E9 /* Pods_Focus_v1.framework in Frameworks */,
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+		EE6DA49C23F731280078B210 /* Frameworks */ = {
+			isa = PBXFrameworksBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+				D2C5AB9B28B8CBA71D46C013 /* Pods_Focus_v1Tests.framework in Frameworks */,
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+		EE6DA4A723F731280078B210 /* Frameworks */ = {
+			isa = PBXFrameworksBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+				F4C1BCD2263912D21D6BC51E /* Pods_Focus_v1_Focus_v1UITests.framework in Frameworks */,
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+/* End PBXFrameworksBuildPhase section */
+
+/* Begin PBXGroup section */
+		079D551743911F54DF1ABF88 /* Frameworks */ = {
+			isa = PBXGroup;
+			children = (
+				A7105EE6EE8689D7A2B7C263 /* Pods_Focus_v1.framework */,
+				701A3EAD754BC354D2D4D512 /* Pods_Focus_v1_Focus_v1UITests.framework */,
+				5DBBAF867BEE1C81E38DA034 /* Pods_Focus_v1Tests.framework */,
+			);
+			name = Frameworks;
+			sourceTree = "<group>";
+		};
+		6C64A8CDB25043393A701C22 /* Pods */ = {
+			isa = PBXGroup;
+			children = (
+				1D5D4408B6E3DF4B8548BEAC /* Pods-Focus_v1.debug.xcconfig */,
+				651DFBC6CC3C92A789167427 /* Pods-Focus_v1.release.xcconfig */,
+				4C851CE98AFA3CF7C295616A /* Pods-Focus_v1-Focus_v1UITests.debug.xcconfig */,
+				C0CE4F8B7F396436DE59AAD1 /* Pods-Focus_v1-Focus_v1UITests.release.xcconfig */,
+				CEBD6984470916C3B4A9DFFC /* Pods-Focus_v1Tests.debug.xcconfig */,
+				268EA5615770FB2B04598D07 /* Pods-Focus_v1Tests.release.xcconfig */,
+			);
+			name = Pods;
+			path = Pods;
+			sourceTree = "<group>";
+		};
+		EE6DA47E23F731260078B210 = {
+			isa = PBXGroup;
+			children = (
+				EE6DA48923F731260078B210 /* Focus_v1 */,
+				EE6DA4A223F731280078B210 /* Focus_v1Tests */,
+				EE6DA4AD23F731280078B210 /* Focus_v1UITests */,
+				EE6DA48823F731260078B210 /* Products */,
+				6C64A8CDB25043393A701C22 /* Pods */,
+				079D551743911F54DF1ABF88 /* Frameworks */,
+			);
+			sourceTree = "<group>";
+		};
+		EE6DA48823F731260078B210 /* Products */ = {
+			isa = PBXGroup;
+			children = (
+				EE6DA48723F731260078B210 /* Focus_v1.app */,
+				EE6DA49F23F731280078B210 /* Focus_v1Tests.xctest */,
+				EE6DA4AA23F731280078B210 /* Focus_v1UITests.xctest */,
+			);
+			name = Products;
+			sourceTree = "<group>";
+		};
+		EE6DA48923F731260078B210 /* Focus_v1 */ = {
+			isa = PBXGroup;
+			children = (
+				EE6DA48A23F731260078B210 /* AppDelegate.swift */,
+				EE6DA48C23F731260078B210 /* SceneDelegate.swift */,
+				EE6DA48E23F731260078B210 /* FirstViewController.swift */,
+				EE6DA49023F731260078B210 /* MyAccountViewController.swift */,
+				EE6DA49223F731260078B210 /* Main.storyboard */,
+				EE39BD6F24008A5200978956 /* dismissKeyboard.swift */,
+				EE6DA4C023F7518A0078B210 /* CreateAccountSignupButton.swift */,
+				EE6DA4BC23F732E90078B210 /* LoginSignupViewController.swift */,
+				EE6DA49523F731280078B210 /* Assets.xcassets */,
+				EE6DA49723F731280078B210 /* LaunchScreen.storyboard */,
+				EE6DA49A23F731280078B210 /* Info.plist */,
+				EE6DA4BE23F739640078B210 /* LoginSignupTextField.swift */,
+				EE7808D3241092900058556C /* GoogleService-Info.plist */,
+			);
+			path = Focus_v1;
+			sourceTree = "<group>";
+		};
+		EE6DA4A223F731280078B210 /* Focus_v1Tests */ = {
+			isa = PBXGroup;
+			children = (
+				EE6DA4A323F731280078B210 /* Focus_v1Tests.swift */,
+				EE6DA4A523F731280078B210 /* Info.plist */,
+			);
+			path = Focus_v1Tests;
+			sourceTree = "<group>";
+		};
+		EE6DA4AD23F731280078B210 /* Focus_v1UITests */ = {
+			isa = PBXGroup;
+			children = (
+				EE6DA4AE23F731280078B210 /* Focus_v1UITests.swift */,
+				EE6DA4B023F731280078B210 /* Info.plist */,
+			);
+			path = Focus_v1UITests;
+			sourceTree = "<group>";
+		};
+/* End PBXGroup section */
+
+/* Begin PBXNativeTarget section */
+		EE6DA48623F731260078B210 /* Focus_v1 */ = {
+			isa = PBXNativeTarget;
+			buildConfigurationList = EE6DA4B323F731280078B210 /* Build configuration list for PBXNativeTarget "Focus_v1" */;
+			buildPhases = (
+				00D69024261C00ADC6893942 /* [CP] Check Pods Manifest.lock */,
+				EE6DA48323F731260078B210 /* Sources */,
+				EE6DA48423F731260078B210 /* Frameworks */,
+				EE6DA48523F731260078B210 /* Resources */,
+				11AC830F195AEC4D242900C0 /* [CP] Embed Pods Frameworks */,
+			);
+			buildRules = (
+			);
+			dependencies = (
+			);
+			name = Focus_v1;
+			productName = Focus_v1;
+			productReference = EE6DA48723F731260078B210 /* Focus_v1.app */;
+			productType = "com.apple.product-type.application";
+		};
+		EE6DA49E23F731280078B210 /* Focus_v1Tests */ = {
+			isa = PBXNativeTarget;
+			buildConfigurationList = EE6DA4B623F731280078B210 /* Build configuration list for PBXNativeTarget "Focus_v1Tests" */;
+			buildPhases = (
+				03E1560D02E6D79B19901272 /* [CP] Check Pods Manifest.lock */,
+				EE6DA49B23F731280078B210 /* Sources */,
+				EE6DA49C23F731280078B210 /* Frameworks */,
+				EE6DA49D23F731280078B210 /* Resources */,
+			);
+			buildRules = (
+			);
+			dependencies = (
+				EE6DA4A123F731280078B210 /* PBXTargetDependency */,
+			);
+			name = Focus_v1Tests;
+			productName = Focus_v1Tests;
+			productReference = EE6DA49F23F731280078B210 /* Focus_v1Tests.xctest */;
+			productType = "com.apple.product-type.bundle.unit-test";
+		};
+		EE6DA4A923F731280078B210 /* Focus_v1UITests */ = {
+			isa = PBXNativeTarget;
+			buildConfigurationList = EE6DA4B923F731280078B210 /* Build configuration list for PBXNativeTarget "Focus_v1UITests" */;
+			buildPhases = (
+				E2DC68D6455D1F56F3DE9F29 /* [CP] Check Pods Manifest.lock */,
+				EE6DA4A623F731280078B210 /* Sources */,
+				EE6DA4A723F731280078B210 /* Frameworks */,
+				EE6DA4A823F731280078B210 /* Resources */,
+				831A268AE4FF77E7846B27F5 /* [CP] Embed Pods Frameworks */,
+			);
+			buildRules = (
+			);
+			dependencies = (
+				EE6DA4AC23F731280078B210 /* PBXTargetDependency */,
+			);
+			name = Focus_v1UITests;
+			productName = Focus_v1UITests;
+			productReference = EE6DA4AA23F731280078B210 /* Focus_v1UITests.xctest */;
+			productType = "com.apple.product-type.bundle.ui-testing";
+		};
+/* End PBXNativeTarget section */
+
+/* Begin PBXProject section */
+		EE6DA47F23F731260078B210 /* Project object */ = {
+			isa = PBXProject;
+			attributes = {
+				LastSwiftUpdateCheck = 1110;
+				LastUpgradeCheck = 1110;
+				ORGANIZATIONNAME = adrianiannantuono;
+				TargetAttributes = {
+					EE6DA48623F731260078B210 = {
+						CreatedOnToolsVersion = 11.1;
+					};
+					EE6DA49E23F731280078B210 = {
+						CreatedOnToolsVersion = 11.1;
+						TestTargetID = EE6DA48623F731260078B210;
+					};
+					EE6DA4A923F731280078B210 = {
+						CreatedOnToolsVersion = 11.1;
+						TestTargetID = EE6DA48623F731260078B210;
+					};
+				};
+			};
+			buildConfigurationList = EE6DA48223F731260078B210 /* Build configuration list for PBXProject "Focus_v1" */;
+			compatibilityVersion = "Xcode 9.3";
+			developmentRegion = en;
+			hasScannedForEncodings = 0;
+			knownRegions = (
+				en,
+				Base,
+			);
+			mainGroup = EE6DA47E23F731260078B210;
+			productRefGroup = EE6DA48823F731260078B210 /* Products */;
+			projectDirPath = "";
+			projectRoot = "";
+			targets = (
+				EE6DA48623F731260078B210 /* Focus_v1 */,
+				EE6DA49E23F731280078B210 /* Focus_v1Tests */,
+				EE6DA4A923F731280078B210 /* Focus_v1UITests */,
+			);
+		};
+/* End PBXProject section */
+
+/* Begin PBXResourcesBuildPhase section */
+		EE6DA48523F731260078B210 /* Resources */ = {
+			isa = PBXResourcesBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+				EE6DA49923F731280078B210 /* LaunchScreen.storyboard in Resources */,
+				EE7808D4241092910058556C /* GoogleService-Info.plist in Resources */,
+				EE6DA49623F731280078B210 /* Assets.xcassets in Resources */,
+				EE6DA49423F731260078B210 /* Main.storyboard in Resources */,
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+		EE6DA49D23F731280078B210 /* Resources */ = {
+			isa = PBXResourcesBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+				EE7808D5241092910058556C /* GoogleService-Info.plist in Resources */,
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+		EE6DA4A823F731280078B210 /* Resources */ = {
+			isa = PBXResourcesBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+				EE7808D6241092910058556C /* GoogleService-Info.plist in Resources */,
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+/* End PBXResourcesBuildPhase section */
+
+/* Begin PBXShellScriptBuildPhase section */
+		00D69024261C00ADC6893942 /* [CP] Check Pods Manifest.lock */ = {
+			isa = PBXShellScriptBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			inputFileListPaths = (
+			);
+			inputPaths = (
+				"${PODS_PODFILE_DIR_PATH}/Podfile.lock",
+				"${PODS_ROOT}/Manifest.lock",
+			);
+			name = "[CP] Check Pods Manifest.lock";
+			outputFileListPaths = (
+			);
+			outputPaths = (
+				"$(DERIVED_FILE_DIR)/Pods-Focus_v1-checkManifestLockResult.txt",
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+			shellPath = /bin/sh;
+			shellScript = "diff \"${PODS_PODFILE_DIR_PATH}/Podfile.lock\" \"${PODS_ROOT}/Manifest.lock\" > /dev/null\nif [ $? != 0 ] ; then\n    # print error to STDERR\n    echo \"error: The sandbox is not in sync with the Podfile.lock. Run 'pod install' or update your CocoaPods installation.\" >&2\n    exit 1\nfi\n# This output is used by Xcode 'outputs' to avoid re-running this script phase.\necho \"SUCCESS\" > \"${SCRIPT_OUTPUT_FILE_0}\"\n";
+			showEnvVarsInLog = 0;
+		};
+		03E1560D02E6D79B19901272 /* [CP] Check Pods Manifest.lock */ = {
+			isa = PBXShellScriptBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			inputFileListPaths = (
+			);
+			inputPaths = (
+				"${PODS_PODFILE_DIR_PATH}/Podfile.lock",
+				"${PODS_ROOT}/Manifest.lock",
+			);
+			name = "[CP] Check Pods Manifest.lock";
+			outputFileListPaths = (
+			);
+			outputPaths = (
+				"$(DERIVED_FILE_DIR)/Pods-Focus_v1Tests-checkManifestLockResult.txt",
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+			shellPath = /bin/sh;
+			shellScript = "diff \"${PODS_PODFILE_DIR_PATH}/Podfile.lock\" \"${PODS_ROOT}/Manifest.lock\" > /dev/null\nif [ $? != 0 ] ; then\n    # print error to STDERR\n    echo \"error: The sandbox is not in sync with the Podfile.lock. Run 'pod install' or update your CocoaPods installation.\" >&2\n    exit 1\nfi\n# This output is used by Xcode 'outputs' to avoid re-running this script phase.\necho \"SUCCESS\" > \"${SCRIPT_OUTPUT_FILE_0}\"\n";
+			showEnvVarsInLog = 0;
+		};
+		11AC830F195AEC4D242900C0 /* [CP] Embed Pods Frameworks */ = {
+			isa = PBXShellScriptBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			inputFileListPaths = (
+				"${PODS_ROOT}/Target Support Files/Pods-Focus_v1/Pods-Focus_v1-frameworks-${CONFIGURATION}-input-files.xcfilelist",
+			);
+			name = "[CP] Embed Pods Frameworks";
+			outputFileListPaths = (
+				"${PODS_ROOT}/Target Support Files/Pods-Focus_v1/Pods-Focus_v1-frameworks-${CONFIGURATION}-output-files.xcfilelist",
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+			shellPath = /bin/sh;
+			shellScript = "\"${PODS_ROOT}/Target Support Files/Pods-Focus_v1/Pods-Focus_v1-frameworks.sh\"\n";
+			showEnvVarsInLog = 0;
+		};
+		831A268AE4FF77E7846B27F5 /* [CP] Embed Pods Frameworks */ = {
+			isa = PBXShellScriptBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			inputFileListPaths = (
+				"${PODS_ROOT}/Target Support Files/Pods-Focus_v1-Focus_v1UITests/Pods-Focus_v1-Focus_v1UITests-frameworks-${CONFIGURATION}-input-files.xcfilelist",
+			);
+			name = "[CP] Embed Pods Frameworks";
+			outputFileListPaths = (
+				"${PODS_ROOT}/Target Support Files/Pods-Focus_v1-Focus_v1UITests/Pods-Focus_v1-Focus_v1UITests-frameworks-${CONFIGURATION}-output-files.xcfilelist",
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+			shellPath = /bin/sh;
+			shellScript = "\"${PODS_ROOT}/Target Support Files/Pods-Focus_v1-Focus_v1UITests/Pods-Focus_v1-Focus_v1UITests-frameworks.sh\"\n";
+			showEnvVarsInLog = 0;
+		};
+		E2DC68D6455D1F56F3DE9F29 /* [CP] Check Pods Manifest.lock */ = {
+			isa = PBXShellScriptBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			inputFileListPaths = (
+			);
+			inputPaths = (
+				"${PODS_PODFILE_DIR_PATH}/Podfile.lock",
+				"${PODS_ROOT}/Manifest.lock",
+			);
+			name = "[CP] Check Pods Manifest.lock";
+			outputFileListPaths = (
+			);
+			outputPaths = (
+				"$(DERIVED_FILE_DIR)/Pods-Focus_v1-Focus_v1UITests-checkManifestLockResult.txt",
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+			shellPath = /bin/sh;
+			shellScript = "diff \"${PODS_PODFILE_DIR_PATH}/Podfile.lock\" \"${PODS_ROOT}/Manifest.lock\" > /dev/null\nif [ $? != 0 ] ; then\n    # print error to STDERR\n    echo \"error: The sandbox is not in sync with the Podfile.lock. Run 'pod install' or update your CocoaPods installation.\" >&2\n    exit 1\nfi\n# This output is used by Xcode 'outputs' to avoid re-running this script phase.\necho \"SUCCESS\" > \"${SCRIPT_OUTPUT_FILE_0}\"\n";
+			showEnvVarsInLog = 0;
+		};
+/* End PBXShellScriptBuildPhase section */
+
+/* Begin PBXSourcesBuildPhase section */
+		EE6DA48323F731260078B210 /* Sources */ = {
+			isa = PBXSourcesBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+				EE6DA49123F731260078B210 /* MyAccountViewController.swift in Sources */,
+				EE6DA48F23F731260078B210 /* FirstViewController.swift in Sources */,
+				EE6DA4C123F7518A0078B210 /* CreateAccountSignupButton.swift in Sources */,
+				EE6DA4BD23F732E90078B210 /* LoginSignupViewController.swift in Sources */,
+				EE6DA4BF23F739640078B210 /* LoginSignupTextField.swift in Sources */,
+				EE39BD7024008A5200978956 /* dismissKeyboard.swift in Sources */,
+				EE6DA48B23F731260078B210 /* AppDelegate.swift in Sources */,
+				EE6DA48D23F731260078B210 /* SceneDelegate.swift in Sources */,
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+		EE6DA49B23F731280078B210 /* Sources */ = {
+			isa = PBXSourcesBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+				EE6DA4A423F731280078B210 /* Focus_v1Tests.swift in Sources */,
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+		EE6DA4A623F731280078B210 /* Sources */ = {
+			isa = PBXSourcesBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+				EE6DA4AF23F731280078B210 /* Focus_v1UITests.swift in Sources */,
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+/* End PBXSourcesBuildPhase section */
+
+/* Begin PBXTargetDependency section */
+		EE6DA4A123F731280078B210 /* PBXTargetDependency */ = {
+			isa = PBXTargetDependency;
+			target = EE6DA48623F731260078B210 /* Focus_v1 */;
+			targetProxy = EE6DA4A023F731280078B210 /* PBXContainerItemProxy */;
+		};
+		EE6DA4AC23F731280078B210 /* PBXTargetDependency */ = {
+			isa = PBXTargetDependency;
+			target = EE6DA48623F731260078B210 /* Focus_v1 */;
+			targetProxy = EE6DA4AB23F731280078B210 /* PBXContainerItemProxy */;
+		};
+/* End PBXTargetDependency section */
+
+/* Begin PBXVariantGroup section */
+		EE6DA49223F731260078B210 /* Main.storyboard */ = {
+			isa = PBXVariantGroup;
+			children = (
+				EE6DA49323F731260078B210 /* Base */,
+			);
+			name = Main.storyboard;
+			sourceTree = "<group>";
+		};
+		EE6DA49723F731280078B210 /* LaunchScreen.storyboard */ = {
+			isa = PBXVariantGroup;
+			children = (
+				EE6DA49823F731280078B210 /* Base */,
+			);
+			name = LaunchScreen.storyboard;
+			sourceTree = "<group>";
+		};
+/* End PBXVariantGroup section */
+
+/* Begin XCBuildConfiguration section */
+		EE6DA4B123F731280078B210 /* Debug */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				ALWAYS_SEARCH_USER_PATHS = NO;
+				CLANG_ANALYZER_NONNULL = YES;
+				CLANG_ANALYZER_NUMBER_OBJECT_CONVERSION = YES_AGGRESSIVE;
+				CLANG_CXX_LANGUAGE_STANDARD = "gnu++14";
+				CLANG_CXX_LIBRARY = "libc++";
+				CLANG_ENABLE_MODULES = YES;
+				CLANG_ENABLE_OBJC_ARC = YES;
+				CLANG_ENABLE_OBJC_WEAK = YES;
+				CLANG_WARN_BLOCK_CAPTURE_AUTORELEASING = YES;
+				CLANG_WARN_BOOL_CONVERSION = YES;
+				CLANG_WARN_COMMA = YES;
+				CLANG_WARN_CONSTANT_CONVERSION = YES;
+				CLANG_WARN_DEPRECATED_OBJC_IMPLEMENTATIONS = YES;
+				CLANG_WARN_DIRECT_OBJC_ISA_USAGE = YES_ERROR;
+				CLANG_WARN_DOCUMENTATION_COMMENTS = YES;
+				CLANG_WARN_EMPTY_BODY = YES;
+				CLANG_WARN_ENUM_CONVERSION = YES;
+				CLANG_WARN_INFINITE_RECURSION = YES;
+				CLANG_WARN_INT_CONVERSION = YES;
+				CLANG_WARN_NON_LITERAL_NULL_CONVERSION = YES;
+				CLANG_WARN_OBJC_IMPLICIT_RETAIN_SELF = YES;
+				CLANG_WARN_OBJC_LITERAL_CONVERSION = YES;
+				CLANG_WARN_OBJC_ROOT_CLASS = YES_ERROR;
+				CLANG_WARN_RANGE_LOOP_ANALYSIS = YES;
+				CLANG_WARN_STRICT_PROTOTYPES = YES;
+				CLANG_WARN_SUSPICIOUS_MOVE = YES;
+				CLANG_WARN_UNGUARDED_AVAILABILITY = YES_AGGRESSIVE;
+				CLANG_WARN_UNREACHABLE_CODE = YES;
+				CLANG_WARN__DUPLICATE_METHOD_MATCH = YES;
+				COPY_PHASE_STRIP = NO;
+				DEBUG_INFORMATION_FORMAT = dwarf;
+				ENABLE_STRICT_OBJC_MSGSEND = YES;
+				ENABLE_TESTABILITY = YES;
+				GCC_C_LANGUAGE_STANDARD = gnu11;
+				GCC_DYNAMIC_NO_PIC = NO;
+				GCC_NO_COMMON_BLOCKS = YES;
+				GCC_OPTIMIZATION_LEVEL = 0;
+				GCC_PREPROCESSOR_DEFINITIONS = (
+					"DEBUG=1",
+					"$(inherited)",
+				);
+				GCC_WARN_64_TO_32_BIT_CONVERSION = YES;
+				GCC_WARN_ABOUT_RETURN_TYPE = YES_ERROR;
+				GCC_WARN_UNDECLARED_SELECTOR = YES;
+				GCC_WARN_UNINITIALIZED_AUTOS = YES_AGGRESSIVE;
+				GCC_WARN_UNUSED_FUNCTION = YES;
+				GCC_WARN_UNUSED_VARIABLE = YES;
+				IPHONEOS_DEPLOYMENT_TARGET = 13.1;
+				MTL_ENABLE_DEBUG_INFO = INCLUDE_SOURCE;
+				MTL_FAST_MATH = YES;
+				ONLY_ACTIVE_ARCH = YES;
+				SDKROOT = iphoneos;
+				SWIFT_ACTIVE_COMPILATION_CONDITIONS = DEBUG;
+				SWIFT_OPTIMIZATION_LEVEL = "-Onone";
+			};
+			name = Debug;
+		};
+		EE6DA4B223F731280078B210 /* Release */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				ALWAYS_SEARCH_USER_PATHS = NO;
+				CLANG_ANALYZER_NONNULL = YES;
+				CLANG_ANALYZER_NUMBER_OBJECT_CONVERSION = YES_AGGRESSIVE;
+				CLANG_CXX_LANGUAGE_STANDARD = "gnu++14";
+				CLANG_CXX_LIBRARY = "libc++";
+				CLANG_ENABLE_MODULES = YES;
+				CLANG_ENABLE_OBJC_ARC = YES;
+				CLANG_ENABLE_OBJC_WEAK = YES;
+				CLANG_WARN_BLOCK_CAPTURE_AUTORELEASING = YES;
+				CLANG_WARN_BOOL_CONVERSION = YES;
+				CLANG_WARN_COMMA = YES;
+				CLANG_WARN_CONSTANT_CONVERSION = YES;
+				CLANG_WARN_DEPRECATED_OBJC_IMPLEMENTATIONS = YES;
+				CLANG_WARN_DIRECT_OBJC_ISA_USAGE = YES_ERROR;
+				CLANG_WARN_DOCUMENTATION_COMMENTS = YES;
+				CLANG_WARN_EMPTY_BODY = YES;
+				CLANG_WARN_ENUM_CONVERSION = YES;
+				CLANG_WARN_INFINITE_RECURSION = YES;
+				CLANG_WARN_INT_CONVERSION = YES;
+				CLANG_WARN_NON_LITERAL_NULL_CONVERSION = YES;
+				CLANG_WARN_OBJC_IMPLICIT_RETAIN_SELF = YES;
+				CLANG_WARN_OBJC_LITERAL_CONVERSION = YES;
+				CLANG_WARN_OBJC_ROOT_CLASS = YES_ERROR;
+				CLANG_WARN_RANGE_LOOP_ANALYSIS = YES;
+				CLANG_WARN_STRICT_PROTOTYPES = YES;
+				CLANG_WARN_SUSPICIOUS_MOVE = YES;
+				CLANG_WARN_UNGUARDED_AVAILABILITY = YES_AGGRESSIVE;
+				CLANG_WARN_UNREACHABLE_CODE = YES;
+				CLANG_WARN__DUPLICATE_METHOD_MATCH = YES;
+				COPY_PHASE_STRIP = NO;
+				DEBUG_INFORMATION_FORMAT = "dwarf-with-dsym";
+				ENABLE_NS_ASSERTIONS = NO;
+				ENABLE_STRICT_OBJC_MSGSEND = YES;
+				GCC_C_LANGUAGE_STANDARD = gnu11;
+				GCC_NO_COMMON_BLOCKS = YES;
+				GCC_WARN_64_TO_32_BIT_CONVERSION = YES;
+				GCC_WARN_ABOUT_RETURN_TYPE = YES_ERROR;
+				GCC_WARN_UNDECLARED_SELECTOR = YES;
+				GCC_WARN_UNINITIALIZED_AUTOS = YES_AGGRESSIVE;
+				GCC_WARN_UNUSED_FUNCTION = YES;
+				GCC_WARN_UNUSED_VARIABLE = YES;
+				IPHONEOS_DEPLOYMENT_TARGET = 13.1;
+				MTL_ENABLE_DEBUG_INFO = NO;
+				MTL_FAST_MATH = YES;
+				SDKROOT = iphoneos;
+				SWIFT_COMPILATION_MODE = wholemodule;
+				SWIFT_OPTIMIZATION_LEVEL = "-O";
+				VALIDATE_PRODUCT = YES;
+			};
+			name = Release;
+		};
+		EE6DA4B423F731280078B210 /* Debug */ = {
+			isa = XCBuildConfiguration;
+			baseConfigurationReference = 1D5D4408B6E3DF4B8548BEAC /* Pods-Focus_v1.debug.xcconfig */;
+			buildSettings = {
+				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
+				CODE_SIGN_STYLE = Automatic;
+				DEVELOPMENT_TEAM = 4XM4VEH6AB;
+				INFOPLIST_FILE = Focus_v1/Info.plist;
+				LD_RUNPATH_SEARCH_PATHS = (
+					"$(inherited)",
+					"@executable_path/Frameworks",
+				);
+				PRODUCT_BUNDLE_IDENTIFIER = "adrianiannantuono.io.Focus-v1";
+				PRODUCT_NAME = "$(TARGET_NAME)";
+				SWIFT_VERSION = 5.0;
+				TARGETED_DEVICE_FAMILY = "1,2";
+			};
+			name = Debug;
+		};
+		EE6DA4B523F731280078B210 /* Release */ = {
+			isa = XCBuildConfiguration;
+			baseConfigurationReference = 651DFBC6CC3C92A789167427 /* Pods-Focus_v1.release.xcconfig */;
+			buildSettings = {
+				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
+				CODE_SIGN_STYLE = Automatic;
+				DEVELOPMENT_TEAM = 4XM4VEH6AB;
+				INFOPLIST_FILE = Focus_v1/Info.plist;
+				LD_RUNPATH_SEARCH_PATHS = (
+					"$(inherited)",
+					"@executable_path/Frameworks",
+				);
+				PRODUCT_BUNDLE_IDENTIFIER = "adrianiannantuono.io.Focus-v1";
+				PRODUCT_NAME = "$(TARGET_NAME)";
+				SWIFT_VERSION = 5.0;
+				TARGETED_DEVICE_FAMILY = "1,2";
+			};
+			name = Release;
+		};
+		EE6DA4B723F731280078B210 /* Debug */ = {
+			isa = XCBuildConfiguration;
+			baseConfigurationReference = CEBD6984470916C3B4A9DFFC /* Pods-Focus_v1Tests.debug.xcconfig */;
+			buildSettings = {
+				ALWAYS_EMBED_SWIFT_STANDARD_LIBRARIES = YES;
+				BUNDLE_LOADER = "$(TEST_HOST)";
+				CODE_SIGN_STYLE = Automatic;
+				DEVELOPMENT_TEAM = 4XM4VEH6AB;
+				INFOPLIST_FILE = Focus_v1Tests/Info.plist;
+				IPHONEOS_DEPLOYMENT_TARGET = 13.1;
+				LD_RUNPATH_SEARCH_PATHS = (
+					"$(inherited)",
+					"@executable_path/Frameworks",
+					"@loader_path/Frameworks",
+				);
+				PRODUCT_BUNDLE_IDENTIFIER = "adrianiannantuono.io.Focus-v1Tests";
+				PRODUCT_NAME = "$(TARGET_NAME)";
+				SWIFT_VERSION = 5.0;
+				TARGETED_DEVICE_FAMILY = "1,2";
+				TEST_HOST = "$(BUILT_PRODUCTS_DIR)/Focus_v1.app/Focus_v1";
+			};
+			name = Debug;
+		};
+		EE6DA4B823F731280078B210 /* Release */ = {
+			isa = XCBuildConfiguration;
+			baseConfigurationReference = 268EA5615770FB2B04598D07 /* Pods-Focus_v1Tests.release.xcconfig */;
+			buildSettings = {
+				ALWAYS_EMBED_SWIFT_STANDARD_LIBRARIES = YES;
+				BUNDLE_LOADER = "$(TEST_HOST)";
+				CODE_SIGN_STYLE = Automatic;
+				DEVELOPMENT_TEAM = 4XM4VEH6AB;
+				INFOPLIST_FILE = Focus_v1Tests/Info.plist;
+				IPHONEOS_DEPLOYMENT_TARGET = 13.1;
+				LD_RUNPATH_SEARCH_PATHS = (
+					"$(inherited)",
+					"@executable_path/Frameworks",
+					"@loader_path/Frameworks",
+				);
+				PRODUCT_BUNDLE_IDENTIFIER = "adrianiannantuono.io.Focus-v1Tests";
+				PRODUCT_NAME = "$(TARGET_NAME)";
+				SWIFT_VERSION = 5.0;
+				TARGETED_DEVICE_FAMILY = "1,2";
+				TEST_HOST = "$(BUILT_PRODUCTS_DIR)/Focus_v1.app/Focus_v1";
+			};
+			name = Release;
+		};
+		EE6DA4BA23F731280078B210 /* Debug */ = {
+			isa = XCBuildConfiguration;
+			baseConfigurationReference = 4C851CE98AFA3CF7C295616A /* Pods-Focus_v1-Focus_v1UITests.debug.xcconfig */;
+			buildSettings = {
+				ALWAYS_EMBED_SWIFT_STANDARD_LIBRARIES = YES;
+				CODE_SIGN_STYLE = Automatic;
+				DEVELOPMENT_TEAM = 4XM4VEH6AB;
+				INFOPLIST_FILE = Focus_v1UITests/Info.plist;
+				LD_RUNPATH_SEARCH_PATHS = (
+					"$(inherited)",
+					"@executable_path/Frameworks",
+					"@loader_path/Frameworks",
+				);
+				PRODUCT_BUNDLE_IDENTIFIER = "adrianiannantuono.io.Focus-v1UITests";
+				PRODUCT_NAME = "$(TARGET_NAME)";
+				SWIFT_VERSION = 5.0;
+				TARGETED_DEVICE_FAMILY = "1,2";
+				TEST_TARGET_NAME = Focus_v1;
+			};
+			name = Debug;
+		};
+		EE6DA4BB23F731280078B210 /* Release */ = {
+			isa = XCBuildConfiguration;
+			baseConfigurationReference = C0CE4F8B7F396436DE59AAD1 /* Pods-Focus_v1-Focus_v1UITests.release.xcconfig */;
+			buildSettings = {
+				ALWAYS_EMBED_SWIFT_STANDARD_LIBRARIES = YES;
+				CODE_SIGN_STYLE = Automatic;
+				DEVELOPMENT_TEAM = 4XM4VEH6AB;
+				INFOPLIST_FILE = Focus_v1UITests/Info.plist;
+				LD_RUNPATH_SEARCH_PATHS = (
+					"$(inherited)",
+					"@executable_path/Frameworks",
+					"@loader_path/Frameworks",
+				);
+				PRODUCT_BUNDLE_IDENTIFIER = "adrianiannantuono.io.Focus-v1UITests";
+				PRODUCT_NAME = "$(TARGET_NAME)";
+				SWIFT_VERSION = 5.0;
+				TARGETED_DEVICE_FAMILY = "1,2";
+				TEST_TARGET_NAME = Focus_v1;
+			};
+			name = Release;
+		};
+/* End XCBuildConfiguration section */
+
+/* Begin XCConfigurationList section */
+		EE6DA48223F731260078B210 /* Build configuration list for PBXProject "Focus_v1" */ = {
+			isa = XCConfigurationList;
+			buildConfigurations = (
+				EE6DA4B123F731280078B210 /* Debug */,
+				EE6DA4B223F731280078B210 /* Release */,
+			);
+			defaultConfigurationIsVisible = 0;
+			defaultConfigurationName = Release;
+		};
+		EE6DA4B323F731280078B210 /* Build configuration list for PBXNativeTarget "Focus_v1" */ = {
+			isa = XCConfigurationList;
+			buildConfigurations = (
+				EE6DA4B423F731280078B210 /* Debug */,
+				EE6DA4B523F731280078B210 /* Release */,
+			);
+			defaultConfigurationIsVisible = 0;
+			defaultConfigurationName = Release;
+		};
+		EE6DA4B623F731280078B210 /* Build configuration list for PBXNativeTarget "Focus_v1Tests" */ = {
+			isa = XCConfigurationList;
+			buildConfigurations = (
+				EE6DA4B723F731280078B210 /* Debug */,
+				EE6DA4B823F731280078B210 /* Release */,
+			);
+			defaultConfigurationIsVisible = 0;
+			defaultConfigurationName = Release;
+		};
+		EE6DA4B923F731280078B210 /* Build configuration list for PBXNativeTarget "Focus_v1UITests" */ = {
+			isa = XCConfigurationList;
+			buildConfigurations = (
+				EE6DA4BA23F731280078B210 /* Debug */,
+				EE6DA4BB23F731280078B210 /* Release */,
+			);
+			defaultConfigurationIsVisible = 0;
+			defaultConfigurationName = Release;
+		};
+/* End XCConfigurationList section */
+	};
+	rootObject = EE6DA47F23F731260078B210 /* Project object */;
+}
