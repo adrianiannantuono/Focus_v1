@@ -118,12 +118,15 @@ class LoginSignupViewController: UIViewController {
                             switch errorCode {
                                 case .invalidEmail:
                                     self.emailError.text = "      Invalid email"
+                                    self.emailField.layer.borderWidth = CGFloat(self.borderWidthError)
                                     print("Invalid email")
                                 case .emailAlreadyInUse:
                                     self.emailError.text = "      Email already in use"
+                                    self.emailField.layer.borderWidth = CGFloat(self.borderWidthError)
                                     print("Email in use")
                                 case .weakPassword:
                                     self.passwordError.text = "      Password is too weak"
+                                    self.passwordField.layer.borderWidth = CGFloat(self.borderWidthError)
                                     print("Password is too weak")
                                 default:
                                     print("Could not create account: \(String(describing: error))")
