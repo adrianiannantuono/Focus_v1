@@ -13,7 +13,7 @@ class CreateAccountSignUpButton: UIButton {
     
     override func didMoveToWindow() {
         
-        self.backgroundColor = UIColor(red: 0.198, green: 0.492, blue: 1, alpha: 1.0)
+        self.backgroundColor = UIColor(named: "MainAccentColor")
         self.frame.size.height = 45
         self.setTitleColor(.white, for: .normal)
         self.setTitleColor(.white, for: .highlighted)

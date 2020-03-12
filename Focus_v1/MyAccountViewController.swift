@@ -14,16 +14,10 @@ class MyAccountViewController: UIViewController {
     override func viewDidLoad() {
         super.viewDidLoad()
         userImage.layer.cornerRadius = userImage.frame.width / 2
-        userImage.backgroundColor = UIColor(named: "TextFieldColor")
         // Do any additional setup after loading the view.
     }
     
-    override func prepare(for segue: UIStoryboardSegue, sender: Any?) {
-        if segue.identifier == "goToSettings" {
-            let destinationController = segue.destination as! SettingsTableViewController
-            destinationController.hidesBottomBarWhenPushed = true // Does all the hide/show work.
-        }
-    }
+
 
 
     @IBAction func changeUserImage(_ sender: Any) {
