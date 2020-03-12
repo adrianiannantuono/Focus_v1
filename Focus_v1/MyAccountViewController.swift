@@ -10,7 +10,6 @@ import UIKit
 
 class MyAccountViewController: UIViewController {
     @IBOutlet weak var userImage: UIImageView!
-    @IBOutlet weak var userBannerImage: UIImageView!
     
     override func viewDidLoad() {
         super.viewDidLoad()
@@ -18,6 +17,14 @@ class MyAccountViewController: UIViewController {
         userImage.backgroundColor = UIColor(named: "TextFieldColor")
         // Do any additional setup after loading the view.
     }
+    
+    override func prepare(for segue: UIStoryboardSegue, sender: Any?) {
+        if segue.identifier == "goToSettings" {
+            let destinationController = segue.destination as! SettingsTableViewController
+            destinationController.hidesBottomBarWhenPushed = true // Does all the hide/show work.
+        }
+    }
+
 
     @IBAction func changeUserImage(_ sender: Any) {
         showImagePickerController(sender)
