@@ -17,9 +17,8 @@ class SettingsTableViewController: UITableViewController {
     override func viewDidLoad() {
         super.viewDidLoad()
         view.backgroundColor = UIColor.systemBackground
-        self.tabBarController?.tabBar.isHidden = true
-        
     }
+    
     @IBAction func logOutClicked(_ sender: Any) {
         let logOutAlert = UIAlertController(title: "Are you sure you would like to log out?", message: nil, preferredStyle: .actionSheet)
         logOutAlert.addAction(UIAlertAction(title: "Log Out", style: .destructive, handler: { action in

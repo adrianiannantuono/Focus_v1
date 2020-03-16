@@ -40,7 +40,7 @@
         <!--Settings-->
         <scene sceneID="nA5-Xe-sy5">
             <objects>
-                <tableViewController id="BNB-Ep-wY6" customClass="SettingsTableViewController" customModule="Focus_v1" customModuleProvider="target" sceneMemberID="viewController">
+                <tableViewController hidesBottomBarWhenPushed="YES" id="BNB-Ep-wY6" customClass="SettingsTableViewController" customModule="Focus_v1" customModuleProvider="target" sceneMemberID="viewController">
                     <tableView key="view" clipsSubviews="YES" contentMode="scaleToFill" alwaysBounceVertical="YES" keyboardDismissMode="onDrag" dataMode="static" style="grouped" separatorStyle="default" rowHeight="-1" estimatedRowHeight="-1" sectionHeaderHeight="18" sectionFooterHeight="18" id="R9T-TU-lJ6">
                         <rect key="frame" x="0.0" y="0.0" width="414" height="896"/>
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
@@ -62,8 +62,8 @@
                                                     <nil key="textColor"/>
                                                     <nil key="highlightedColor"/>
                                                 </label>
-                                                <label opaque="NO" multipleTouchEnabled="YES" contentMode="left" insetsLayoutMarginsFromSafeArea="NO" text="placeholderEmail@email.ca" textAlignment="right" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" id="VlI-GU-9vw">
-                                                    <rect key="frame" x="185" y="12" width="209" height="20.5"/>
+                                                <label opaque="NO" multipleTouchEnabled="YES" contentMode="left" insetsLayoutMarginsFromSafeArea="NO" text="placeholderl@email.ca" textAlignment="right" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" id="VlI-GU-9vw">
+                                                    <rect key="frame" x="222" y="12" width="172" height="20.5"/>
                                                     <autoresizingMask key="autoresizingMask"/>
                                                     <fontDescription key="fontDescription" type="system" pointSize="17"/>
                                                     <nil key="textColor"/>
@@ -141,6 +141,9 @@
                                             </constraints>
                                         </tableViewCellContentView>
                                         <color key="backgroundColor" systemColor="systemRedColor" red="1" green="0.23137254900000001" blue="0.18823529410000001" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
+                                        <accessibility key="accessibilityConfiguration">
+                                            <accessibilityTraits key="traits" button="YES"/>
+                                        </accessibility>
                                         <gestureRecognizers/>
                                         <connections>
                                             <outletCollection property="gestureRecognizers" destination="pw9-YI-Qlc" appends="YES" id="dAV-GJ-qcd"/>
@@ -200,34 +203,57 @@
                         <rect key="frame" x="0.0" y="0.0" width="414" height="896"/>
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
                         <subviews>
-                            <imageView clipsSubviews="YES" contentMode="scaleAspectFit" horizontalHuggingPriority="251" verticalHuggingPriority="251" image="defaultProfileImage" translatesAutoresizingMaskIntoConstraints="NO" id="EBi-BJ-iHA" userLabel="User Image">
-                                <rect key="frame" x="157" y="102" width="100" height="100"/>
+                            <imageView clipsSubviews="YES" contentMode="scaleAspectFill" horizontalHuggingPriority="251" verticalHuggingPriority="251" translatesAutoresizingMaskIntoConstraints="NO" id="Naf-Un-ZRQ" userLabel="Banner Image">
+                                <rect key="frame" x="0.0" y="88" width="414" height="140"/>
+                                <accessibility key="accessibilityConfiguration">
+                                    <accessibilityTraits key="traits" button="YES" image="YES"/>
+                                </accessibility>
                                 <gestureRecognizers/>
                                 <constraints>
-                                    <constraint firstAttribute="width" constant="100" id="2cQ-x3-Uwq"/>
-                                    <constraint firstAttribute="height" constant="100" id="AHn-ci-QcF"/>
+                                    <constraint firstAttribute="width" constant="414" id="JJs-Bs-Dcw"/>
+                                    <constraint firstAttribute="height" constant="140" id="oZK-qd-XO1"/>
+                                </constraints>
+                                <connections>
+                                    <outletCollection property="gestureRecognizers" destination="xQH-KT-KgM" appends="YES" id="oRf-Pa-YbI"/>
+                                </connections>
+                            </imageView>
+                            <imageView clipsSubviews="YES" contentMode="scaleAspectFill" horizontalHuggingPriority="251" verticalHuggingPriority="251" image="defaultProfileImage" translatesAutoresizingMaskIntoConstraints="NO" id="EBi-BJ-iHA" userLabel="User Image">
+                                <rect key="frame" x="28" y="154" width="100" height="100"/>
+                                <accessibility key="accessibilityConfiguration">
+                                    <accessibilityTraits key="traits" button="YES" image="YES"/>
+                                </accessibility>
+                                <gestureRecognizers/>
+                                <constraints>
+                                    <constraint firstAttribute="width" constant="100" id="gsx-N8-QuI"/>
+                                    <constraint firstAttribute="height" constant="100" id="ryg-oH-MrM"/>
                                 </constraints>
                                 <connections>
                                     <outletCollection property="gestureRecognizers" destination="0zW-P5-Vgz" appends="YES" id="QKB-I5-dJh"/>
                                 </connections>
                             </imageView>
-                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Firstname Lastname" textAlignment="center" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="Ysr-zE-sq2">
-                                <rect key="frame" x="54" y="198" width="306" height="32"/>
+                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Firstname Lastname" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" minimumFontSize="18" adjustsLetterSpacingToFitWidth="YES" translatesAutoresizingMaskIntoConstraints="NO" id="Ysr-zE-sq2">
+                                <rect key="frame" x="141" y="181" width="260" height="32"/>
                                 <constraints>
-                                    <constraint firstAttribute="height" constant="32" id="0MA-ku-Qz9"/>
-                                    <constraint firstAttribute="width" constant="306" id="xhJ-SK-MYh"/>
+                                    <constraint firstAttribute="width" constant="260" id="i1L-iv-EhK"/>
+                                    <constraint firstAttribute="height" constant="32" id="w2W-8c-gRk"/>
                                 </constraints>
-                                <fontDescription key="fontDescription" name="Avenir-Medium" family="Avenir" pointSize="24"/>
-                                <nil key="textColor"/>
+                                <fontDescription key="fontDescription" name="Avenir-Medium" family="Avenir" pointSize="23"/>
+                                <color key="textColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
                                 <nil key="highlightedColor"/>
                             </label>
                         </subviews>
                         <color key="backgroundColor" systemColor="systemBackgroundColor" cocoaTouchSystemColor="whiteColor"/>
                         <constraints>
-                            <constraint firstItem="Ysr-zE-sq2" firstAttribute="top" secondItem="O1u-W8-tvY" secondAttribute="top" constant="110" id="AzJ-A8-6kt"/>
-                            <constraint firstItem="EBi-BJ-iHA" firstAttribute="top" secondItem="O1u-W8-tvY" secondAttribute="top" constant="14" id="Dwc-mY-N4E"/>
-                            <constraint firstItem="Ysr-zE-sq2" firstAttribute="centerX" secondItem="QS5-Rx-YEW" secondAttribute="centerX" id="Id4-kw-xJ9"/>
-                            <constraint firstItem="EBi-BJ-iHA" firstAttribute="centerX" secondItem="QS5-Rx-YEW" secondAttribute="centerX" id="OPx-Nl-Ovw"/>
+                            <constraint firstItem="Ysr-zE-sq2" firstAttribute="leading" secondItem="EBi-BJ-iHA" secondAttribute="trailing" constant="13" id="2K5-rw-gpx"/>
+                            <constraint firstItem="Ysr-zE-sq2" firstAttribute="top" secondItem="O1u-W8-tvY" secondAttribute="top" constant="93" id="4fq-c0-QcV"/>
+                            <constraint firstItem="Naf-Un-ZRQ" firstAttribute="top" secondItem="O1u-W8-tvY" secondAttribute="top" id="64O-0d-RAN"/>
+                            <constraint firstItem="Naf-Un-ZRQ" firstAttribute="top" secondItem="O1u-W8-tvY" secondAttribute="top" id="P5Z-JX-HZk"/>
+                            <constraint firstItem="Naf-Un-ZRQ" firstAttribute="trailing" secondItem="O1u-W8-tvY" secondAttribute="trailing" id="acC-Kp-MpH"/>
+                            <constraint firstItem="Naf-Un-ZRQ" firstAttribute="top" secondItem="O1u-W8-tvY" secondAttribute="top" id="dmF-IG-FnX"/>
+                            <constraint firstItem="EBi-BJ-iHA" firstAttribute="top" secondItem="O1u-W8-tvY" secondAttribute="top" constant="66" id="jbI-2e-Voh"/>
+                            <constraint firstItem="Naf-Un-ZRQ" firstAttribute="centerX" secondItem="QS5-Rx-YEW" secondAttribute="centerX" id="jm8-Qh-bDE"/>
+                            <constraint firstItem="EBi-BJ-iHA" firstAttribute="leading" secondItem="O1u-W8-tvY" secondAttribute="leading" constant="28" id="ntx-1V-oab"/>
+                            <constraint firstItem="Naf-Un-ZRQ" firstAttribute="leading" secondItem="O1u-W8-tvY" secondAttribute="leading" id="qcy-cY-0oS"/>
                         </constraints>
                         <viewLayoutGuide key="safeArea" id="O1u-W8-tvY"/>
                     </view>
@@ -240,13 +266,19 @@
                         </barButtonItem>
                     </navigationItem>
                     <connections>
+                        <outlet property="bannerImage" destination="Naf-Un-ZRQ" id="seB-PG-3P6"/>
                         <outlet property="userImage" destination="EBi-BJ-iHA" id="5l9-Fi-bPd"/>
                     </connections>
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="4Nw-L8-lE0" sceneMemberID="firstResponder"/>
-                <tapGestureRecognizer id="0zW-P5-Vgz">
+                <tapGestureRecognizer id="0zW-P5-Vgz" userLabel="Tap Gesture Recognizer User">
                     <connections>
-                        <action selector="changeUserImage:" destination="8rJ-Kc-sve" id="GBf-am-soY"/>
+                        <action selector="changeUserImage:" destination="8rJ-Kc-sve" id="tKH-VV-PNZ"/>
+                    </connections>
+                </tapGestureRecognizer>
+                <tapGestureRecognizer id="xQH-KT-KgM" userLabel="Tap Gesture Recognizer Banner">
+                    <connections>
+                        <action selector="changeBannerImage:" destination="8rJ-Kc-sve" id="iQC-cw-VHv"/>
                     </connections>
                 </tapGestureRecognizer>
             </objects>
@@ -512,12 +544,12 @@
         </scene>
     </scenes>
     <resources>
-        <image name="defaultProfileImage" width="96" height="96"/>
+        <image name="defaultProfileImage" width="801" height="800"/>
         <image name="first" width="30" height="30"/>
         <image name="gear" catalog="system" width="64" height="58"/>
         <image name="person" catalog="system" width="64" height="58"/>
         <namedColor name="MainAccentColor">
-            <color red="0.099420305370000003" green="0.45058326199999998" blue="1" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
+            <color red="0.098999999463558197" green="0.45100000500679016" blue="1" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
         </namedColor>
     </resources>
 </document>
