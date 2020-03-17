@@ -11,7 +11,7 @@ import FirebaseAuth
 import FirebaseDatabase
 
 class LoginSignupViewController: UIViewController {
-    var dRe = Database.database().reference()
+    var databaseRef: DatabaseReference!
     
     var onCreateAccount = true
     var borderWidthError = 1
@@ -40,6 +40,7 @@ class LoginSignupViewController: UIViewController {
     override func viewDidLoad() {
         super.viewDidLoad()
         self.hideKeyboardWhenTappedAround()
+        databaseRef = Database.database().reference()
         
         newViewController = (self.storyboard?.instantiateViewController(withIdentifier: "home") as! UITabBarController)
         newViewController.modalPresentationStyle = .fullScreen
@@ -114,13 +115,16 @@ class LoginSignupViewController: UIViewController {
             if (ret) {
                 return
             } else {
-                Auth.auth().createUser(withEmail: emailField.text!, password: passwordField.text!) { authResult, error in
-                    if (error == nil) {
+                Auth.auth().createUser(withEmail: emailField.text!, password: passwordField.text!) { authResult, aError in
+                    if (aError == nil) {
                         // Succesfully created an account
+                        // Add to database
+                        self.databaseRef.child("Users").child(Auth.auth().currentUser!.uid).setValue(["email" : self.emailField.text, "password" : self.passwordField.text, "firstname" : self.firstNameField.text, "lastname" : self.lastNameField.text])
+                        
                         self.present(self.newViewController, animated: true, completion: nil)
                     } else {
                         // Error creating an account
-                        if let errorCode = AuthErrorCode(rawValue: error!._code) {
+                        if let errorCode = AuthErrorCode(rawValue: aError!._code) {
                             switch errorCode {
                                 case .invalidEmail:
                                     self.emailError.text = "      Invalid email"
@@ -135,7 +139,7 @@ class LoginSignupViewController: UIViewController {
                                     self.passwordField.layer.borderWidth = CGFloat(self.borderWidthError)
                                     print("Password is too weak")
                                 default:
-                                    print("Could not create account: \(String(describing: error))")
+                                    print("Could not create account: \(String(describing: aError))")
                             }
                         }
                         return

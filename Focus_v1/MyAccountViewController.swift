@@ -7,16 +7,24 @@
 //
 
 import UIKit
+import FirebaseAuth
+import FirebaseDatabase
 
 class MyAccountViewController: UIViewController {
+    var databaseRef = Database.database().reference()
+    var user:User!
+    
     @IBOutlet weak var userImage: UIImageView!
     @IBOutlet weak var bannerImage: UIImageView!
     var chosenImage: UIImageView!
+    @IBOutlet weak var name: UILabel!
     
     var gradient = CAGradientLayer()
     
     override func viewDidLoad() {
         super.viewDidLoad()
+        user = Auth.auth().currentUser
+        
         view.backgroundColor = UIColor.systemBackground
         userImage.layer.cornerRadius = userImage.frame.width / 2
         
@@ -26,6 +34,15 @@ class MyAccountViewController: UIViewController {
         gradient.startPoint = CGPoint(x: 0.5, y: 0.5)
         gradient.endPoint = CGPoint(x: 0.5, y: 1.25)
         bannerImage.layer.insertSublayer(gradient, at: 0)
+        
+        databaseRef.child("Users").child(user.uid).observeSingleEvent(of: .value, with: { (snapshot) in
+          // Get user value
+          let value = snapshot.value as? NSDictionary
+          self.name.text = "" + (value?["firstname"] as? String ?? "") + " " + (value?["lastname"] as? String ?? "")
+          // ...
+          }) { (error) in
+            print(error.localizedDescription)
+        }
         // Do any additional setup after loading the view.
     }
     

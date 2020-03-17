@@ -44,7 +44,8 @@
                     <tableView key="view" clipsSubviews="YES" contentMode="scaleToFill" alwaysBounceVertical="YES" keyboardDismissMode="onDrag" dataMode="static" style="grouped" separatorStyle="default" rowHeight="-1" estimatedRowHeight="-1" sectionHeaderHeight="18" sectionFooterHeight="18" id="R9T-TU-lJ6">
                         <rect key="frame" x="0.0" y="0.0" width="414" height="896"/>
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
-                        <color key="backgroundColor" cocoaTouchSystemColor="groupTableViewBackgroundColor"/>
+                        <color key="backgroundColor" systemColor="systemBackgroundColor" cocoaTouchSystemColor="whiteColor"/>
+                        <color key="sectionIndexBackgroundColor" systemColor="systemBackgroundColor" cocoaTouchSystemColor="whiteColor"/>
                         <sections>
                             <tableViewSection headerTitle="About" id="ELj-UP-FUO">
                                 <cells>
@@ -62,8 +63,8 @@
                                                     <nil key="textColor"/>
                                                     <nil key="highlightedColor"/>
                                                 </label>
-                                                <label opaque="NO" multipleTouchEnabled="YES" contentMode="left" insetsLayoutMarginsFromSafeArea="NO" text="placeholderl@email.ca" textAlignment="right" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" id="VlI-GU-9vw">
-                                                    <rect key="frame" x="222" y="12" width="172" height="20.5"/>
+                                                <label opaque="NO" multipleTouchEnabled="YES" contentMode="left" insetsLayoutMarginsFromSafeArea="NO" text="placeholder@email.ca" textAlignment="right" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" id="VlI-GU-9vw">
+                                                    <rect key="frame" x="225.5" y="12" width="168.5" height="20.5"/>
                                                     <autoresizingMask key="autoresizingMask"/>
                                                     <fontDescription key="fontDescription" type="system" pointSize="17"/>
                                                     <nil key="textColor"/>
@@ -183,6 +184,7 @@
                     </tableView>
                     <navigationItem key="navigationItem" title="Settings" id="IFW-44-gJM"/>
                     <connections>
+                        <outlet property="email" destination="VlI-GU-9vw" id="m49-qi-hA1"/>
                         <outlet property="logOutButton" destination="pw9-YI-Qlc" id="c29-2j-5My"/>
                     </connections>
                 </tableViewController>
@@ -210,14 +212,13 @@
                                 </accessibility>
                                 <gestureRecognizers/>
                                 <constraints>
-                                    <constraint firstAttribute="width" constant="414" id="JJs-Bs-Dcw"/>
                                     <constraint firstAttribute="height" constant="140" id="oZK-qd-XO1"/>
                                 </constraints>
                                 <connections>
                                     <outletCollection property="gestureRecognizers" destination="xQH-KT-KgM" appends="YES" id="oRf-Pa-YbI"/>
                                 </connections>
                             </imageView>
-                            <imageView clipsSubviews="YES" contentMode="scaleAspectFill" horizontalHuggingPriority="251" verticalHuggingPriority="251" image="defaultProfileImage" translatesAutoresizingMaskIntoConstraints="NO" id="EBi-BJ-iHA" userLabel="User Image">
+                            <imageView clipsSubviews="YES" contentMode="scaleToFill" horizontalHuggingPriority="251" verticalHuggingPriority="251" image="defaultProfileImage" translatesAutoresizingMaskIntoConstraints="NO" id="EBi-BJ-iHA" userLabel="User Image">
                                 <rect key="frame" x="28" y="154" width="100" height="100"/>
                                 <accessibility key="accessibilityConfiguration">
                                     <accessibilityTraits key="traits" button="YES" image="YES"/>
@@ -247,6 +248,7 @@
                             <constraint firstItem="Ysr-zE-sq2" firstAttribute="leading" secondItem="EBi-BJ-iHA" secondAttribute="trailing" constant="13" id="2K5-rw-gpx"/>
                             <constraint firstItem="Ysr-zE-sq2" firstAttribute="top" secondItem="O1u-W8-tvY" secondAttribute="top" constant="93" id="4fq-c0-QcV"/>
                             <constraint firstItem="Naf-Un-ZRQ" firstAttribute="top" secondItem="O1u-W8-tvY" secondAttribute="top" id="64O-0d-RAN"/>
+                            <constraint firstItem="Naf-Un-ZRQ" firstAttribute="leading" secondItem="O1u-W8-tvY" secondAttribute="leading" id="DDi-U3-jwY"/>
                             <constraint firstItem="Naf-Un-ZRQ" firstAttribute="top" secondItem="O1u-W8-tvY" secondAttribute="top" id="P5Z-JX-HZk"/>
                             <constraint firstItem="Naf-Un-ZRQ" firstAttribute="trailing" secondItem="O1u-W8-tvY" secondAttribute="trailing" id="acC-Kp-MpH"/>
                             <constraint firstItem="Naf-Un-ZRQ" firstAttribute="top" secondItem="O1u-W8-tvY" secondAttribute="top" id="dmF-IG-FnX"/>
@@ -254,6 +256,7 @@
                             <constraint firstItem="Naf-Un-ZRQ" firstAttribute="centerX" secondItem="QS5-Rx-YEW" secondAttribute="centerX" id="jm8-Qh-bDE"/>
                             <constraint firstItem="EBi-BJ-iHA" firstAttribute="leading" secondItem="O1u-W8-tvY" secondAttribute="leading" constant="28" id="ntx-1V-oab"/>
                             <constraint firstItem="Naf-Un-ZRQ" firstAttribute="leading" secondItem="O1u-W8-tvY" secondAttribute="leading" id="qcy-cY-0oS"/>
+                            <constraint firstItem="Naf-Un-ZRQ" firstAttribute="trailing" secondItem="O1u-W8-tvY" secondAttribute="trailing" id="ycb-lH-tEh"/>
                         </constraints>
                         <viewLayoutGuide key="safeArea" id="O1u-W8-tvY"/>
                     </view>
@@ -267,6 +270,7 @@
                     </navigationItem>
                     <connections>
                         <outlet property="bannerImage" destination="Naf-Un-ZRQ" id="seB-PG-3P6"/>
+                        <outlet property="name" destination="Ysr-zE-sq2" id="vSu-kI-Fcp"/>
                         <outlet property="userImage" destination="EBi-BJ-iHA" id="5l9-Fi-bPd"/>
                     </connections>
                 </viewController>

@@ -7,16 +7,30 @@
 //
 import UIKit
 import FirebaseAuth
+import FirebaseDatabase
 
 class SettingsTableViewController: UITableViewController {
+    var databaseRef = Database.database().reference()
+    var user: User!
     var newViewController: UIViewController!
 
     @IBOutlet var logOutButton: UITapGestureRecognizer!
+    @IBOutlet weak var email: UILabel!
     
     
     override func viewDidLoad() {
         super.viewDidLoad()
+        user = Auth.auth().currentUser
         view.backgroundColor = UIColor.systemBackground
+        
+        databaseRef.child("Users").child(user.uid).observeSingleEvent(of: .value, with: { (snapshot) in
+          // Get user value
+          let value = snapshot.value as? NSDictionary
+          self.email.text = (value?["email"] as? String ?? "")
+          // ...
+          }) { (error) in
+            print(error.localizedDescription)
+        }
     }
     
     @IBAction func logOutClicked(_ sender: Any) {
